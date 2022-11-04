@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+{%block content%}
+<head>
+
+    <title>T5G Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+     
+                <img src="{{STATIC_URL}}images/google.png" alt="T5gLogo" style="width:250px; height:150px; margin-left: 500px;">
+            
+            </div>
+            
+
+
+
+
+        </div> 
+        <div class="content">
+                    {%for dashboard_link in dashboard_links%}
+                     <button class="btnn"> <a href={{dashboard_link.link}}  target="_blank">{{dashboard_link.name}}</a></button>
+   
+                    {% endfor %}
+
+
+
+  
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>
+
+{% endblock content %}
